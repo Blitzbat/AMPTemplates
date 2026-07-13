@@ -92,7 +92,7 @@
         "InputType": "number",
         "MinValue": "2",
         "MaxValue": "64",
-        "ParamFieldName": "MaxPlayers",
+        "ParamFieldName": "Engine.GameInfo.MaxPlayers",
         "DefaultValue": "32",
         "Placeholder": "32",
         "Suffix": "players",

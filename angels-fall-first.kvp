@@ -33,9 +33,8 @@ App.StoreDownloadLocations=
 App.ExecutableWin=407480\Binaries\Win64\AFFGameServer.exe
 App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=407480/Binaries/Win64
-App.LinuxCommandLineArgs="./AFFGameServer.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} {{ServerMap}}?GamePassword={{GamePassword}}?MaxPlayers={{$MaxUsers}}?NumPlay={{NumPlay}}?BalanceBots={{BalanceBots}}?AILevel={{AILevel}}?BriefingTime={{BriefingTime}}?RandomCommander={{RandomCommander}}?RedStartingTickets={{RedStartingTickets}}?BlueStartingTickets={{BlueStartingTickets}}?FriendlyFire={{FriendlyFire}}{{CustomOptions}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -configsubdir=AMP -log=AMP/server.log -seekfreeloadingserver
+App.CommandLineArgs={{$PlatformArgs}} {{ServerMap}}?GamePassword={{GamePassword}}?MaxPlayers={{$MaxUsers}}?NumPlay={{NumPlay}}?BalanceBots={{BalanceBots}}?AILevel={{AILevel}}?BriefingTime={{BriefingTime}}?RandomCommander={{RandomCommander}}?RedStartingTickets={{RedStartingTickets}}?BlueStartingTickets={{BlueStartingTickets}}?FriendlyFire={{FriendlyFire}}{{CustomOptions}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -log=server.log -seekfreeloadingserver
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"367270","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}

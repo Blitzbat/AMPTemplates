@@ -1,9 +1,11 @@
 [
     {
-        "UpdateStageName": "Config Directory Creation",
+        "UpdateStageName": "SteamCMD Download",
         "UpdateSourcePlatform": "All",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}AFFGame/Config/AMP",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "407480",
+        "UpdateSourceArgs": "367270",
+        "ForceDownloadPlatform": "Windows",
         "SkipOnFailure": false
     },
     {
@@ -11,7 +13,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/Blitzbat/AMPTemplates/main/angels-fall-firstgame.ini",
-        "UpdateSourceTarget": "{{$FullBaseDir}}AFFGame/Config/AMP",
+        "UpdateSourceTarget": "{{$FullBaseDir}}AFFGame/Config",
         "UpdateSourceArgs": "PCServer-AFFGame.ini",
         "OverwriteExistingFiles": false,
         "SkipOnFailure": false
@@ -21,18 +23,9 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/Blitzbat/AMPTemplates/main/angels-fall-firstengine.ini",
-        "UpdateSourceTarget": "{{$FullBaseDir}}AFFGame/Config/AMP",
+        "UpdateSourceTarget": "{{$FullBaseDir}}AFFGame/Config",
         "UpdateSourceArgs": "PCServer-AFFEngine.ini",
         "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "SteamCMD Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "407480",
-        "UpdateSourceArgs": "367270",
-        "ForceDownloadPlatform": "Windows",
         "SkipOnFailure": false
     },
     {
