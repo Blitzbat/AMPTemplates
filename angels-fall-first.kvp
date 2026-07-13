@@ -34,7 +34,7 @@ App.ExecutableWin=407480\Binaries\Win64\AFFGameServer.exe
 App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=407480/Binaries/Win64
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} {{ServerMap}}?GamePassword={{GamePassword}}?MaxPlayers={{$MaxUsers}}?NumPlay={{NumPlay}}?BalanceBots={{BalanceBots}}?AILevel={{AILevel}}?BriefingTime={{BriefingTime}}?RandomCommander={{RandomCommander}}?RedStartingTickets={{RedStartingTickets}}?BlueStartingTickets={{BlueStartingTickets}}?FriendlyFire={{FriendlyFire}}{{CustomOptions}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -log=server.log -seekfreeloadingserver
+App.CommandLineArgs={{$PlatformArgs}} {{ServerMap}}?GamePassword={{GamePassword}}?MaxPlayers={{$MaxUsers}}?NumPlay={{NumPlay}}?BalanceBots={{BalanceBots}}?AILevel={{AILevel}}?BriefingTime={{BriefingTime}}?RandomCommander={{RandomCommander}}?RedStartingTickets={{RedStartingTickets}}?BlueStartingTickets={{BlueStartingTickets}}?FriendlyFire={{FriendlyFire}}{{CustomOptions}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -log=server.log -seekfreeloadingserver -stdout -FullStdOutLogOutput
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"367270","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
@@ -44,8 +44,8 @@ App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
 App.ExitString=stop
 App.ExitFile=app_exit.lck
-App.HasWriteableConsole=False
-App.HasReadableConsole=False
+App.HasWriteableConsole=True
+App.HasReadableConsole=True
 App.UDPLogger=False
 App.SupportsLiveSettingsChanges=False
 App.LiveSettingChangeCommandFormat=set {0} "{1}"
