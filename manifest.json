@@ -1,9 +1,9 @@
 {
 	"id": "dd6f1d65-2bcf-4865-8a40-64f7c4bfe106",
-	"authors": ["CubeCoders Limited", "AMP Community", "Blitzbat"],
+	"authors": ["Blitzbat"],
 	"origin": "https://github.com/Blitzbat/AMPTemplates.git",
 	"url": "https://github.com/Blitzbat/AMPTemplates",
 	"imagefile": "",
-	"prefix": "",
+	"prefix": "Blitzbat",
 	"repotype": "AppTemplates"
 }
