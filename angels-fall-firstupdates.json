@@ -1,0 +1,46 @@
+[
+    {
+        "UpdateStageName": "Config Directory Creation",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}AFFGame/Config/AMP",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "PCServer-AFFGame.ini Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Blitzbat/AMPTemplates/main/angels-fall-firstgame.ini",
+        "UpdateSourceTarget": "{{$FullBaseDir}}AFFGame/Config/AMP",
+        "UpdateSourceArgs": "PCServer-AFFGame.ini",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "PCServer-AFFEngine.ini Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Blitzbat/AMPTemplates/main/angels-fall-firstengine.ini",
+        "UpdateSourceTarget": "{{$FullBaseDir}}AFFGame/Config/AMP",
+        "UpdateSourceArgs": "PCServer-AFFEngine.ini",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "SteamCMD Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "407480",
+        "UpdateSourceArgs": "367270",
+        "ForceDownloadPlatform": "Windows",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Initialise Wine",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullRootDir}}.wine\\\" >/dev/null 2>&1; WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init\"",
+        "SkipOnFailure": false
+    }
+]

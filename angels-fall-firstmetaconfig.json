@@ -1,0 +1,16 @@
+[
+    {
+        "ConfigFile": "AFFGame/Config/AMP/PCServer-AFFGame.ini",
+        "AutoMap": true,
+        "ConfigType": "ini",
+        "ConfigFormat": "{0}={1}",
+        "ConfigFormatRegex": "^(?<key>.+?)=(?<value>.*?)$"
+    },
+    {
+        "ConfigFile": "AFFGame/Config/AMP/PCServer-AFFEngine.ini",
+        "AutoMap": true,
+        "ConfigType": "ini",
+        "ConfigFormat": "{0}={1}",
+        "ConfigFormatRegex": "^(?<key>.+?)=(?<value>.*?)$"
+    }
+]
