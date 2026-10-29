@@ -1,0 +1,25 @@
+[
+    {
+        "UpdateStageName": "Everlast Dedicated Server (SteamCMD)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "4268160",
+        "UpdateSourceVersion": "public",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Linux executable permission",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Raptor.Game",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Initial configuration and Steam SDK",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"set -eu; umask 077; mkdir -p everlast/4268160/data/Worlds/Dedicated everlast/home/.steam/sdk64; if [ ! -f everlast/4268160/data/appsettings.json ]; then printf %s eyJOZXR3b3JrQ29uZmlnIjp7Ik5hbWUiOiJFdmVybGFzdCBEZWRpY2F0ZWQgU2VydmVyIiwiUG9ydCI6OTAwM319 | base64 -d > everlast/4268160/data/appsettings.json; fi; if [ ! -f everlast/4268160/data/Worlds/Dedicated/worldsettings.json ]; then printf %s eyJNYXhQbGF5ZXJzIjoxMDAsIkRpc3BsYXlOYW1lIjoiRGVkaWNhdGVkIiwiRGVzY3JpcHRpb24iOiIiLCJTZXJ2ZXJQYXNzd29yZCI6IiIsIkFkbWlucyI6IiIsIkRpZmZpY3VsdHkiOiJQc3ljaGljIiwiUHZQRW5hYmxlZCI6dHJ1ZSwiQWNjZXB0c1RyYW5zZmVycyI6ZmFsc2UsIlN0cmlwR2Vhck9uSW1wb3J0IjpmYWxzZSwiRGVhdGhQZW5hbHR5IjoiRGVhdGhDb250YWluZXIiLCJYcFJhdGUiOjEuMCwiR2F0aGVyUmF0ZSI6MS4wLCJMb290UmF0ZSI6MS4wLCJNYXhDaGFyYWN0ZXJzUGVyVXNlciI6MTAsIk1heEltcG9ydExldmVsIjowLCJJbXBvcnRBbGxvd2xpc3QiOiIiLCJPcmlnaW5TZXJ2ZXJJZCI6IiIsIkNyZWF0ZWREYXRlIjoiX19DUkVBVEVEX18iLCJMYXN0UGxheWVkRGF0ZSI6Il9fQ1JFQVRFRF9fIn0= | base64 -d > everlast/4268160/data/Worlds/Dedicated/worldsettings.json; sed -i s/__CREATED__/$(date -u +%Y-%m-%dT%H:%M:%SZ)/g everlast/4268160/data/Worlds/Dedicated/worldsettings.json; fi; test -f everlast/linux64/steamclient.so; ln -sfn ../../../linux64/steamclient.so everlast/home/.steam/sdk64/steamclient.so; chmod 700 everlast/home everlast/4268160/data; chmod 600 everlast/4268160/data/appsettings.json everlast/4268160/data/Worlds/Dedicated/worldsettings.json\"",
+        "SkipOnFailure": false
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 9003,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "Everlast-Spielport. Query-Port muss 27016 + (Spielport % 5) sein."
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 27019,
+        "Ref": "QueryPort",
+        "Name": "Steam Query Port",
+        "Description": "Vom Spiel berechnet: 27016 + (Spielport % 5). Diesen AMP-Port bei Änderungen entsprechend nachziehen."
+    }
+]

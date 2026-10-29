@@ -1,0 +1,251 @@
+[
+    {
+        "DisplayName": "Servername",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Name in der Serverliste, 1–64 Zeichen.",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "ParamFieldName": "$.NetworkConfig.Name",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Everlast Dedicated Server",
+        "EnumValues": {},
+        "Required": true
+    },
+    {
+        "DisplayName": "Spielport",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "FieldName": "$GamePort",
+        "InputType": "number",
+        "ParamFieldName": "$.NetworkConfig.Port",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "9003",
+        "EnumValues": {},
+        "Hidden": true
+    },
+    {
+        "DisplayName": "Maximale Spieler",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "1–1000 Spieler.",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "ParamFieldName": "$.MaxPlayers",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "100",
+        "EnumValues": {},
+        "minValue": 1,
+        "maxValue": 1000
+    },
+    {
+        "DisplayName": "Welt-Anzeigename",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "1–64 Zeichen. Der interne Weltordner heißt Dedicated.",
+        "FieldName": "DisplayName",
+        "InputType": "text",
+        "ParamFieldName": "$.DisplayName",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Dedicated",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Beschreibung",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Maximal 120 Zeichen in der Serverliste.",
+        "FieldName": "Description",
+        "InputType": "text",
+        "ParamFieldName": "$.Description",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Serverpasswort",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "FieldName": "ServerPassword",
+        "InputType": "password",
+        "ParamFieldName": "$.ServerPassword",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Administratoren",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "17-stellige SteamID64, durch Kommas ohne Leerzeichen getrennt; leer bedeutet keine Administratoren.",
+        "FieldName": "Admins",
+        "InputType": "text",
+        "ParamFieldName": "$.Admins",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Schwierigkeit",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Nur vor dem ersten Weltstart ändern! Bestehende Welten behalten ihre Schwierigkeit.",
+        "FieldName": "Difficulty",
+        "InputType": "enum",
+        "ParamFieldName": "$.Difficulty",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "Psychic",
+        "EnumValues": {
+            "Hylic": "Hylic",
+            "Psychic": "Psychic",
+            "Pneumonic": "Pneumonic",
+            "Pyrrhic": "Pyrrhic",
+            "Sufferer": "Sufferer",
+            "OneShot": "OneShot"
+        }
+    },
+    {
+        "DisplayName": "PvP erlauben",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "FieldName": "PvPEnabled",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.PvPEnabled",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "True": "true",
+            "False": "false"
+        }
+    },
+    {
+        "DisplayName": "Charaktertransfers erlauben",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "FieldName": "AcceptsTransfers",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.AcceptsTransfers",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "false",
+        "EnumValues": {
+            "True": "true",
+            "False": "false"
+        }
+    },
+    {
+        "DisplayName": "Importierte Ausrüstung entfernen",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "FieldName": "StripGearOnImport",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.StripGearOnImport",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "false",
+        "EnumValues": {
+            "True": "true",
+            "False": "false"
+        }
+    },
+    {
+        "DisplayName": "Todesstrafe",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Einige Schwierigkeitsgrade überschreiben diese Auswahl.",
+        "FieldName": "DeathPenalty",
+        "InputType": "enum",
+        "ParamFieldName": "$.DeathPenalty",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "DeathContainer",
+        "EnumValues": {
+            "DeathContainer": "Gegenstände in Deaths Shop",
+            "KeepInventory": "Inventar behalten"
+        }
+    },
+    {
+        "DisplayName": "XP-Multiplikator",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "0.1 bis 10; Dezimalpunkt verwenden.",
+        "FieldName": "XpRate",
+        "InputType": "number",
+        "ParamFieldName": "$.XpRate",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "1",
+        "EnumValues": {},
+        "minValue": 0,
+        "maxValue": 10
+    },
+    {
+        "DisplayName": "Sammel-Multiplikator",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "0.1 bis 10; Dezimalpunkt verwenden.",
+        "FieldName": "GatherRate",
+        "InputType": "number",
+        "ParamFieldName": "$.GatherRate",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "1",
+        "EnumValues": {},
+        "minValue": 0,
+        "maxValue": 10
+    },
+    {
+        "DisplayName": "Beute-Multiplikator",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "0.1 bis 10; Dezimalpunkt verwenden.",
+        "FieldName": "LootRate",
+        "InputType": "number",
+        "ParamFieldName": "$.LootRate",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "1",
+        "EnumValues": {},
+        "minValue": 0,
+        "maxValue": 10
+    },
+    {
+        "DisplayName": "Charaktere pro Steam-Konto",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "FieldName": "MaxCharactersPerUser",
+        "InputType": "number",
+        "ParamFieldName": "$.MaxCharactersPerUser",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "10",
+        "EnumValues": {},
+        "minValue": 1,
+        "maxValue": 100
+    },
+    {
+        "DisplayName": "Maximales Import-Level",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "0 erlaubt jedes Level.",
+        "FieldName": "MaxImportLevel",
+        "InputType": "number",
+        "ParamFieldName": "$.MaxImportLevel",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "0",
+        "EnumValues": {},
+        "minValue": 0,
+        "maxValue": 999999999
+    },
+    {
+        "DisplayName": "Import-Allowlist",
+        "Category": "Everlast:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "17-stellige SteamID64, durch Kommas ohne Leerzeichen getrennt; leer bedeutet keine Einschränkung.",
+        "FieldName": "ImportAllowlist",
+        "InputType": "text",
+        "ParamFieldName": "$.ImportAllowlist",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    }
+]
